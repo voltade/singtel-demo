@@ -59,14 +59,11 @@ export default function ChannelsPage() {
         subtitle="Transport adapters connecting your customers to this organisation's AI agents. Add WhatsApp, web chat, or a sandbox number — and your AI agents respond automatically."
         right={
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                type="button"
-                className="inline-flex items-center gap-1.5 rounded-md border bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                <Plus className="h-3.5 w-3.5" />
-                Add Channel
-              </button>
+            <DropdownMenuTrigger
+              className="inline-flex items-center gap-1.5 rounded-md border bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              <Plus className="h-3.5 w-3.5" />
+              Add Channel
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => setConnectMode("coexistence")}>
@@ -218,13 +215,10 @@ export default function ChannelsPage() {
                     <TableCell className="text-xs text-muted-foreground">{c.createdAt}</TableCell>
                     <TableCell>
                       <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                          <button
-                            type="button"
-                            className="grid h-7 w-7 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                          >
-                            <MoreHorizontal className="h-3.5 w-3.5" />
-                          </button>
+                        <DropdownMenuTrigger
+                          className="grid h-7 w-7 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                        >
+                          <MoreHorizontal className="h-3.5 w-3.5" />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
